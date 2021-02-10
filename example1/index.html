@@ -58,23 +58,66 @@ https://www.w3schools.com/w3css/4/w3.css
   </div>
 </div>
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-right-align w3-white" id="home">
+    <div class="row">
+      <div class="column left" style="background-color:#aaa;">
+    <h2>Column 1</h2>
     <h1 class="w3-jumbo">Emmalyn Campau</h1>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <header class="w3-container w3-padding-32 w3-left-align w3-white" id="home">
+        <div class="image-stack">
+          <div class="image-stack__item image-stack__item--top">
+            <img src="https://lh3.googleusercontent.com/EL5wgOspz9RLNo3hpanYm8Ea2Z4IKvj8sQeZrGOMy2ii7U3Oc7tkKwDfaDj4USzO9PtqOWFPNvu9y1aIdkZQ8JhiQeQy9arm0lhEuFxaTxtqMszAw9Cvxh4-5-nule2DV2dGwzvsp_HA-ZWOfJCMSOgqzrXNqshqjO06j1vO8ibrBV7USlGM_e6vIlZ-ZuREDg6bENc-cTnH_JJs6avEfgpzgbx1xZFT5zEkg3NGTZz4nEm5SjoXPUd-el3Ry35K-gCxZcnuYI7TvjH0-21NUwTWL73Fsex9MoRPV3eE8dQ0zD3NkaupliuJEuID_GA-N0hYSDvdbVRLoJUp9XTiX6aiPncpqtC2_IpTQW_UUn7mMFX-j4ePzhQyNY8GXmRnanwOIWtLNtpij9cCHSlbqenALgy9JgkV0n18A5TB80NWewE_D4EFKL7qAR0k2jAlrO-f_yBXaneYk64SfSO4b2khUfI5uzzddgkyVnbkCHT1qG-bLLO359CBUGAVx73OFMkO27Qpr1um0nd3uPkv__jZi1P72s5-qtLpU41eljqBiLABVeA6TdaqIcIo6Jn6nH7VN-79Tx7nwuuR1ikzCgM2RlMaaGL2fl6u8EZQrM_PhbJsRldmceIIMC1CgxORUuWZhOVrS_YuTa2WXbIx9Py9uE-dgvNcBtVa4nl19VW_kitHdLgpzp3lr8fqsA=w1912-h1274-no?authuser=1" alt="image unavailable" width="650" height="450" >
+          </div>
+          <div class="image-stack__item image-stack__item--bottom">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/texture-waves-cropped.jpg" alt="">
+          </div>
+        </div>
+    </header>
+  </div>
+</div>
   </header>
 
-  <header class="w3-container w3-padding-32 w3-left-align w3-white" id="home">
-      <div class="image-stack">
-        <div class="image-stack__item image-stack__item--top">
-          <img src="https://lh3.googleusercontent.com/EL5wgOspz9RLNo3hpanYm8Ea2Z4IKvj8sQeZrGOMy2ii7U3Oc7tkKwDfaDj4USzO9PtqOWFPNvu9y1aIdkZQ8JhiQeQy9arm0lhEuFxaTxtqMszAw9Cvxh4-5-nule2DV2dGwzvsp_HA-ZWOfJCMSOgqzrXNqshqjO06j1vO8ibrBV7USlGM_e6vIlZ-ZuREDg6bENc-cTnH_JJs6avEfgpzgbx1xZFT5zEkg3NGTZz4nEm5SjoXPUd-el3Ry35K-gCxZcnuYI7TvjH0-21NUwTWL73Fsex9MoRPV3eE8dQ0zD3NkaupliuJEuID_GA-N0hYSDvdbVRLoJUp9XTiX6aiPncpqtC2_IpTQW_UUn7mMFX-j4ePzhQyNY8GXmRnanwOIWtLNtpij9cCHSlbqenALgy9JgkV0n18A5TB80NWewE_D4EFKL7qAR0k2jAlrO-f_yBXaneYk64SfSO4b2khUfI5uzzddgkyVnbkCHT1qG-bLLO359CBUGAVx73OFMkO27Qpr1um0nd3uPkv__jZi1P72s5-qtLpU41eljqBiLABVeA6TdaqIcIo6Jn6nH7VN-79Tx7nwuuR1ikzCgM2RlMaaGL2fl6u8EZQrM_PhbJsRldmceIIMC1CgxORUuWZhOVrS_YuTa2WXbIx9Py9uE-dgvNcBtVa4nl19VW_kitHdLgpzp3lr8fqsA=w1912-h1274-no?authuser=1" alt="image unavailable" width="650" height="450" >
-        </div>
-        <div class="image-stack__item image-stack__item--bottom">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/texture-waves-cropped.jpg" alt="">
-        </div>
-      </div>
-  </header>
 
 
   <!-- About Section -->
