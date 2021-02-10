@@ -25,6 +25,22 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   clear: both;
 }
 
+/*style for stack*/
+.image-stack {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+.image-stack_item--top {
+  grid-column: 1 / span 8;
+  grid-row: 1;
+  padding-top: 20%;
+  z-index: 1;
+}
+.image-stack_item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
 
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
