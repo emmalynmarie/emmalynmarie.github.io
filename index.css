@@ -4,18 +4,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Set the width of the sidebar to 120px */
 .w3-sidebar {width: 120px;background: #757575;}
 
+
 /* Create two unequal columns that floats next to each other */
 .column {
   float: left;
-  padding: 10px;
+  /* padding within columns*/
+  padding: 15px;
 }
 
 .left {
-  width: 40%;
+  width: 60%;
 }
 
 .right {
-  width: 60%;
+  width: 40%;
 }
 
 /* Clear floats after the columns */
@@ -23,26 +25,102 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   content: "";
   display: table;
   clear: both;
+  width: 100%;
 }
 
+.row1 {
+  width: 100%;
+}
 /*style for stack*/
+
+p {
+  font-size: 22px;
+  font-family: sans-serif;
+  color: #000000;
+  padding: 0px;
+}
+
+.container {
+  padding: 0px 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  margin: 16px;
+  max-width: 1000px;
+}
+
+/* Relevant styles */
 .image-stack {
   display: grid;
+  position: relative; // imperative for the overlapping to work
   grid-template-columns: repeat(12, 1fr);
-  position: relative;
 }
-.image-stack_item--top {
-  grid-column: 1 / span 8;
-  grid-row: 1;
-  padding-top: 20%;
-  z-index: 1;
-}
-.image-stack_item--bottom {
+
+.image-stack__item--bottom {
   grid-column: 4 / -1;
   grid-row: 1;
 }
 
+.image-stack__item--top {
+  grid-row: 1;
+  grid-column: 1 / span 8;
+  padding-top: 20%; // slightly arbitrary, keeps proportion once resized
+  z-index: 1; // tells the browser to make this image on top
+}
+
+/*nav bar*/
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  margin-left: 16px;
+  margin-right: 16px;
+  /* when commented out top bar remains */
+  /*height: 1500px; /* Used in this example to enable scrolling */
+}
+
+.margins {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.marginstop {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.blue-background {
+  background-color: #F0F8FF;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
+#main {margin-left: 0px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
