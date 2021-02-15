@@ -4,11 +4,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Set the width of the sidebar to 120px */
 .w3-sidebar {width: 120px;background: #757575;}
 
-h1 {
-  font-family: sans-serif;
-  font-weight: bold;
-  display: block;
-}
 /* Create two unequal columns that floats next to each other */
 .column {
   float: left;
@@ -38,6 +33,13 @@ h1 {
 /*style for stack*/
 
 p {
+  font-size: 22px;
+  font-family: sans-serif;
+  color: #000000;
+  padding: 0px;
+}
+
+y {
   font-size: 22px;
   font-family: sans-serif;
   color: #000000;
